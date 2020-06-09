@@ -2,7 +2,7 @@
 
 Desafio de [Frotend Mentor](https://www.frontendmentor.io/profile/Arturo-Lopez).
 
-[Clique aqui](four-card-feature-section.arturo-lopez.now.sh) para el resultado final.
+[Clique aqui](https://four-card-feature-section.arturo-lopez.now.sh/) para el resultado final.
 
 ## Herramientas utilizadas
 
