@@ -8,7 +8,5 @@ Desafio de [Frotend Mentor](https://www.frontendmentor.io/profile/Arturo-Lopez).
 
 - HTML
 - CSS
-- Google Fonts
-- Normalize CSS
 
 ![Preview](./images/desktop-preview.jpg)
