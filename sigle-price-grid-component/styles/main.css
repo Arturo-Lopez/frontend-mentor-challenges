@@ -1,0 +1,171 @@
+html,
+body {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* MAIN STYLES */
+body {
+  min-height: 100%;
+  height: auto;
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  background-color: #e5eff5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4.5rem 2rem;
+}
+
+.container {
+  -webkit-box-shadow: 0 0 16px #cccccc;
+          box-shadow: 0 0 16px #cccccc;
+  border-radius: 0.5rem;
+}
+
+.card {
+  padding: 1.75rem;
+}
+
+h2 {
+  margin: 0 0 1.5rem 0;
+  color: white;
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-weight: 400;
+  color: white;
+}
+
+.message {
+  background-color: white;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.message h2 {
+  color: #2ab2af;
+  font-size: 1.5rem;
+}
+
+.message h3 {
+  font-size: 1.15rem;
+  color: #c0df34;
+}
+
+.message p {
+  color: #98a6bd;
+}
+
+.action {
+  background-color: #2ab2af;
+}
+
+.action h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 0.5rem 0;
+  color: white;
+  font-weight: 400;
+}
+
+.action h3 span {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-right: 0.35em;
+}
+
+.action p {
+  margin: 0 0 2em 0;
+}
+
+.action button {
+  width: 100%;
+  height: 3rem;
+  color: white;
+  font-weight: 700;
+  background-color: #c0df34;
+  border-radius: 0.25rem;
+  border: none;
+  -webkit-box-shadow: 0 0 16px rgba(97, 97, 97, 0.5);
+          box-shadow: 0 0 16px rgba(97, 97, 97, 0.5);
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.action button:hover {
+  background-color: white;
+  color: #c0df34;
+}
+
+.about {
+  background-color: #2ec2c0;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+@media (min-width: 600px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 650px;
+  }
+  .card {
+    padding: 2.5rem;
+  }
+  .message {
+    width: 100%;
+  }
+  .action,
+  .about {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .action {
+    border-bottom-left-radius: 0.5rem;
+  }
+  .about {
+    border-bottom-left-radius: 0;
+  }
+}
+
+/* EXTRA STYLES */
+footer {
+  position: absolute;
+  top: 1rem;
+}
+
+.attribution {
+  color: #2ab2af;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #98a6bd;
+  font-weight: 700;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,154 @@
+html,
+body {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* MAIN STYLES */
+
+$cyan: hsl(179, 62%, 43%);
+$bright-yellow: hsl(71, 73%, 54%);
+$light-grey: hsl(204, 43%, 93%);
+$gray-blue: hsl(218, 22%, 67%);
+
+body {
+  min-height: 100%;
+  height: auto;
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  background-color: $light-grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4.5rem 2rem;
+}
+
+.container {
+  box-shadow: 0 0 16px hsl(0, 0%, 80%);
+  border-radius: 0.5rem;
+}
+
+.card {
+  padding: 1.75rem;
+}
+
+h2 {
+  margin: 0 0 1.5rem 0;
+  color: white;
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-weight: 400;
+  color: white;
+}
+
+.message {
+  background-color: white;
+  border-radius: 0.5rem 0.5rem 0 0;
+  h2 {
+    color: $cyan;
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.15rem;
+    color: $bright-yellow;
+  }
+  p {
+    color: $gray-blue;
+  }
+}
+
+.action {
+  background-color: $cyan;
+  h3 {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0.5rem 0;
+    color: white;
+    font-weight: 400;
+    span {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-right: 0.35em;
+    }
+  }
+  p {
+    margin: 0 0 2em 0;
+  }
+
+  button {
+    width: 100%;
+    height: 3rem;
+    color: white;
+    font-weight: 700;
+    background-color: $bright-yellow;
+    border-radius: 0.25rem;
+    border: none;
+    box-shadow: 0 0 16px hsla(0, 0%, 38%, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  button:hover {
+    background-color: white;
+    color: $bright-yellow;
+  }
+}
+
+.about {
+  background-color: hsl(179, 62%, 47%);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+@media (min-width: 600px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 650px;
+  }
+
+  .card {
+    padding: 2.5rem;
+  }
+
+  .message {
+    width: 100%;
+  }
+  .action,
+  .about {
+    flex: 1;
+  }
+
+  .action {
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .about {
+    border-bottom-left-radius: 0;
+  }
+}
+
+/* EXTRA STYLES */
+footer {
+  position: absolute;
+  top: 1rem;
+}
+
+.attribution {
+  color: $cyan;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: $gray-blue;
+  font-weight: 700;
+}

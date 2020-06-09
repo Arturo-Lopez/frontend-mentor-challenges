@@ -1,0 +1,253 @@
+html,
+body {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* MAIN STYLES */
+
+$primary: hsl(223, 87%, 63%);
+$pale-blue: hsl(223, 100%, 88%);
+$light-red: hsl(354, 100%, 66%);
+$gray: hsl(0, 0%, 59%);
+$dark-blue: hsl(209, 33%, 12%);
+
+body {
+  font-size: 20px;
+  font-family: "Libre Franklin", sans-serif;
+  background-color: white;
+}
+
+.container {
+  max-width: 950px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10vh 2.5rem;
+  padding-bottom: 0;
+  margin: 0 auto;
+  position: relative;
+}
+
+.brand-logo {
+  display: flex;
+  justify-content: center;
+  img {
+    height: 25px;
+  }
+}
+
+.title {
+  h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: $gray;
+    span {
+      color: $dark-blue;
+      font-weight: 700;
+    }
+  }
+  p {
+    text-align: center;
+    font-size: 0.75rem;
+  }
+}
+
+.form {
+  width: 100%;
+  max-width: 600px;
+  input,
+  button {
+    height: 3rem;
+    border: 0.75px solid $pale-blue;
+    width: 100%;
+    border-radius: 3rem;
+    font-size: 0.75rem;
+  }
+
+  div {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0.75rem;
+  }
+
+  div::after {
+    position: absolute;
+    bottom: -1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    color: $light-red;
+    text-align: center;
+    white-space: nowrap;
+    font-style: italic;
+  }
+
+  input {
+    padding: 0 2rem;
+    transition: box-shadow 0.3s ease-in-out;
+    outline: none;
+  }
+
+  input::placeholder {
+    color: $gray;
+    font-weight: 300;
+  }
+
+  input:hover,
+  input:focus {
+    box-shadow: 0 0 8px $pale-blue;
+  }
+
+  button {
+    background-color: $primary;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 6px 8px $pale-blue;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+
+  button:hover {
+    background-color: white;
+    color: $primary;
+    box-shadow: 0 8px 12px $pale-blue;
+  }
+
+  button:active {
+    transform: translateY(5%);
+  }
+}
+
+.event {
+  input {
+    border-color: $light-red;
+  }
+  div {
+    margin-bottom: 3rem;
+  }
+}
+
+.empty {
+  div::after {
+    content: "Whoops! It looks like you forgot to add your email";
+  }
+}
+
+.invalid {
+  div::after {
+    content: "Please provide a valid email address";
+  }
+}
+
+.success {
+  $success-green: hsl(116, 46%, 49%);
+  div::after {
+    content: "Subscription successful!";
+    color: $success-green;
+  }
+  input {
+    border-color: $success-green;
+  }
+}
+
+.illustration {
+  width: 90%;
+}
+
+.footer {
+  .social {
+    display: flex;
+    justify-content: center;
+  }
+  .social-item {
+    border: 0.75px solid $pale-blue;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    i {
+      color: $primary;
+    }
+
+    &:hover {
+      background-color: $primary;
+      border-color: transparent;
+      i {
+        color: white;
+      }
+    }
+  }
+
+  .social-item:nth-of-type(2) {
+    margin: 0 0.75rem;
+  }
+
+  .copy {
+    margin: 4vh 0 6vh 0;
+    font-size: 0.75rem;
+    color: $gray;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 550px) {
+  .form {
+    display: flex;
+    div {
+      margin: 0 1rem 0 0;
+    }
+
+    div:after {
+      left: 2rem;
+      transform: initial;
+    }
+
+    button {
+      max-width: 175px;
+    }
+  }
+  .title {
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5em;
+    }
+    p {
+      font-size: 1.25rem;
+    }
+  }
+
+  .illustration {
+    width: 70%;
+    margin: 5% 0;
+  }
+}
+
+/* EXTRA STYLES */
+
+footer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

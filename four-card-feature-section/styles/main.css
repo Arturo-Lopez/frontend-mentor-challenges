@@ -1,0 +1,136 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+header {
+  max-width: 500px;
+  margin: 4rem auto;
+  text-align: center;
+}
+
+header h1 {
+  color: #4c4e61;
+  font-weight: 200;
+}
+
+header h1 span {
+  font-weight: 700;
+}
+
+p {
+  color: #a3a5ae;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  background-color: white;
+  border-radius: 0.25rem;
+  padding: 1.75rem;
+  -webkit-box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  margin: 1rem;
+  overflow: hidden;
+}
+
+.card h2 {
+  margin: 0;
+  color: #4c4e61;
+}
+
+.card p {
+  margin-bottom: 2.5rem;
+}
+
+.card img {
+  display: block;
+  margin-left: auto;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+}
+
+.card:nth-of-type(1)::before {
+  background-color: #45d3d3;
+}
+
+.card:nth-of-type(2)::before {
+  background-color: #ea5353;
+}
+
+.card:nth-of-type(3)::before {
+  background-color: #549ef2;
+}
+
+.card:nth-of-type(4)::before {
+  background-color: #fcaf4a;
+}
+
+.card:nth-of-type(1),
+.card:nth-of-type(3) {
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+@media (max-width: 678px) {
+  .card:nth-of-type(1),
+  .card:nth-of-type(3) {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  .card:nth-of-type(3) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .card:nth-of-type(4) {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+footer {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=main.css.map */

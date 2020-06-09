@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- NORMALIZE CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./styles/main.css" />
+
+    <title>Frontend Mentor | Ping coming soon page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style></style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="brand-logo">
+        <img src="./images/logo.svg" alt="brand-logo" class="logo" />
+      </div>
+
+      <div class="title">
+        <h1>We are launching <span>soon!</span></h1>
+        <p>Subscribe and get notified</p>
+      </div>
+
+      <div class="form">
+        <div>
+          <input name="email" id="email" placeholder="Your email address..." />
+        </div>
+        <button type="submit" onclick="notify()">Notify Me</button>
+      </div>
+
+      <img
+        src="./images/illustration-dashboard.png"
+        alt="illustration-dashboard"
+        class="illustration"
+      />
+
+      <div class="footer">
+        <div class="social">
+          <div class="social-item">
+            <i class="fab fa-facebook-f fa-sm"></i>
+          </div>
+          <div class="social-item">
+            <i class="fab fa-twitter fa-sm"></i>
+          </div>
+          <div class="social-item">
+            <i class="fab fa-instagram fa-sm"></i>
+          </div>
+        </div>
+        <div class="copy">
+          &copy; Copyright Ping. All rights reserved.
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://arturo-lopez.com">Arturo López</a>.
+      </p>
+    </footer>
+
+    <!-- FONT AWESOME ICONS -->
+    <script
+      src="https://kit.fontawesome.com/d176fb8743.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CUSTOM JS -->
+    <script src="./main.js"></script>
+  </body>
+</html>

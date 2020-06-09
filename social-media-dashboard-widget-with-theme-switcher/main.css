@@ -1,0 +1,308 @@
+:root {
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --youtube: hsl(348, 97%, 39%);
+
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --toogle: hsl(230, 22%, 74%);
+  --toggle-hover: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+
+  --bg: hsl(0, 0%, 100%);
+  --top-bg: hsl(225, 100%, 98%);
+  --card-bg: hsl(227, 47%, 96%);
+  --card-bg-hover: hsl(227, 47%, 91%);
+  --title: hsl(230, 17%, 14%);
+  --body: hsl(228, 12%, 44%);
+}
+
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+.dark {
+  --bg: hsl(230, 17%, 14%);
+  --top-bg: hsl(232, 19%, 15%);
+  --card-bg: hsl(228, 28%, 20%);
+  --card-bg-hover: hsl(228, 28%, 27%);
+  --title: hsl(0, 0%, 100%);
+  --body: hsl(228, 34%, 66%);
+  --toogle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  background-color: var(--bg);
+  padding: 0 1rem;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 28vh;
+  width: 100vw;
+  z-index: -1;
+  background-color: var(--top-bg);
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+header {
+  padding-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin: 0 0 0.25em 0;
+}
+
+h1,
+h3 {
+  color: var(--title);
+}
+
+p,
+span {
+  color: var(--body);
+}
+
+header p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.title {
+  flex: 1;
+}
+
+/* THEME SWITCHER */
+
+.theme-switch {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switch > span {
+  font-weight: 700;
+  padding-right: 1rem;
+}
+
+.dark-theme-switch {
+  display: none;
+}
+
+.dark-theme-label {
+  height: 1.5rem;
+  width: 3rem;
+  border-radius: 0.75rem;
+  background: var(--toogle);
+  position: relative;
+  cursor: pointer;
+  transition: none;
+}
+
+.dark-theme-label span {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 0.75rem;
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--bg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.dark-theme-label:hover,
+.dark-theme-switch:checked {
+  background: var(--toggle-hover);
+}
+
+.dark-theme-switch:checked ~ .dark-theme-label span {
+  transform: translate(-1.5rem, -50%);
+}
+
+@media (max-width: 650px) {
+  header {
+    flex-flow: column;
+    align-items: flex-start;
+  }
+
+  .title {
+    border-bottom: 1px solid var(--body);
+    padding-bottom: 1rem;
+    width: 100%;
+  }
+
+  .theme-switch {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .theme-switch {
+    margin-top: 1rem;
+  }
+}
+
+/* SOCIAL CARDS */
+
+.social-cards,
+.overview-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2.5rem 0;
+  margin: -1rem;
+}
+
+.card-social,
+.card-overview {
+  background-color: var(--card-bg);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  border-radius: 4px;
+  min-width: 180px;
+  cursor: pointer;
+}
+
+.card-social:hover,
+.card-overview:hover {
+  background-color: var(--card-bg-hover);
+}
+
+.card-social {
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  flex-basis: 150px;
+}
+
+.card-social span:first-of-type {
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.card-social span:first-of-type img {
+  display: inline-block;
+  margin: 0.375rem;
+}
+
+.card-social h3 {
+  font-size: 3rem;
+  margin: 1rem 0 0 0;
+}
+
+.card-social p {
+  color: var(--body);
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin: 0 0 2rem 0;
+}
+
+.card-social::before {
+  content: "";
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card-social:nth-of-type(1)::before {
+  background-color: var(--facebook);
+}
+
+.card-social:nth-of-type(2)::before {
+  background-color: var(--twitter);
+}
+
+.card-social:nth-of-type(3)::before {
+  background: var(--instagram);
+}
+
+.card-social:nth-of-type(4)::before {
+  background-color: var(--youtube);
+}
+
+/* TREND SOCIAL */
+.trend {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--lime-green);
+}
+
+.down {
+  color: var(--bright-red);
+}
+
+/* OVERVIEW */
+
+h2 {
+  color: var(--body);
+}
+
+.overview-cards {
+  padding-top: 1rem;
+}
+
+.card-overview {
+  flex-basis: 200px;
+  padding: 1.5rem;
+  min-height: 130px;
+  justify-content: space-between;
+}
+
+.card-overview > span,
+.card-overview > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-overview > span {
+  align-items: center;
+  font-weight: 700;
+  color: var(--body);
+}
+
+.card-overview > div {
+  align-items: flex-end;
+}
+
+.card-overview h3 {
+  color: var(--title);
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* EXTRA STYLES */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--title);
+}
+.attribution a {
+  color: var(--lime-green);
+}

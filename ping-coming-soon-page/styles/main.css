@@ -1,0 +1,291 @@
+html,
+body {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* MAIN STYLES */
+body {
+  font-size: 20px;
+  font-family: "Libre Franklin", sans-serif;
+  background-color: white;
+}
+
+.container {
+  max-width: 950px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10vh 2.5rem;
+  padding-bottom: 0;
+  margin: 0 auto;
+  position: relative;
+}
+
+.brand-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.brand-logo img {
+  height: 25px;
+}
+
+.title h1 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #969696;
+}
+
+.title h1 span {
+  color: #151f29;
+  font-weight: 700;
+}
+
+.title p {
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.form {
+  width: 100%;
+  max-width: 600px;
+}
+
+.form input,
+.form button {
+  height: 3rem;
+  border: 0.75px solid #c2d3ff;
+  width: 100%;
+  border-radius: 3rem;
+  font-size: 0.75rem;
+}
+
+.form div {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+.form div::after {
+  position: absolute;
+  bottom: -1.5em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 0.75rem;
+  color: #ff5263;
+  text-align: center;
+  white-space: nowrap;
+  font-style: italic;
+}
+
+.form input {
+  padding: 0 2rem;
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  outline: none;
+}
+
+.form input::-webkit-input-placeholder {
+  color: #969696;
+  font-weight: 300;
+}
+
+.form input:-ms-input-placeholder {
+  color: #969696;
+  font-weight: 300;
+}
+
+.form input::-ms-input-placeholder {
+  color: #969696;
+  font-weight: 300;
+}
+
+.form input::placeholder {
+  color: #969696;
+  font-weight: 300;
+}
+
+.form input:hover,
+.form input:focus {
+  -webkit-box-shadow: 0 0 8px #c2d3ff;
+          box-shadow: 0 0 8px #c2d3ff;
+}
+
+.form button {
+  background-color: #4f7df3;
+  color: white;
+  font-weight: 600;
+  -webkit-box-shadow: 0 6px 8px #c2d3ff;
+          box-shadow: 0 6px 8px #c2d3ff;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.form button:hover {
+  background-color: white;
+  color: #4f7df3;
+  -webkit-box-shadow: 0 8px 12px #c2d3ff;
+          box-shadow: 0 8px 12px #c2d3ff;
+}
+
+.form button:active {
+  -webkit-transform: translateY(5%);
+          transform: translateY(5%);
+}
+
+.event input {
+  border-color: #ff5263;
+}
+
+.event div {
+  margin-bottom: 3rem;
+}
+
+.empty div::after {
+  content: "Whoops! It looks like you forgot to add your email";
+}
+
+.invalid div::after {
+  content: "Please provide a valid email address";
+}
+
+.success div::after {
+  content: "Subscription successful!";
+  color: #4bb643;
+}
+
+.success input {
+  border-color: #4bb643;
+}
+
+.illustration {
+  width: 90%;
+}
+
+.footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .social-item {
+  border: 0.75px solid #c2d3ff;
+  height: 2rem;
+  width: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer .social-item i {
+  color: #4f7df3;
+}
+
+.footer .social-item:hover {
+  background-color: #4f7df3;
+  border-color: transparent;
+}
+
+.footer .social-item:hover i {
+  color: white;
+}
+
+.footer .social-item:nth-of-type(2) {
+  margin: 0 0.75rem;
+}
+
+.footer .copy {
+  margin: 4vh 0 6vh 0;
+  font-size: 0.75rem;
+  color: #969696;
+  white-space: nowrap;
+}
+
+@media (min-width: 550px) {
+  .form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .form div {
+    margin: 0 1rem 0 0;
+  }
+  .form div:after {
+    left: 2rem;
+    -webkit-transform: initial;
+            transform: initial;
+  }
+  .form button {
+    max-width: 175px;
+  }
+  .title h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+  }
+  .title p {
+    font-size: 1.25rem;
+  }
+  .illustration {
+    width: 70%;
+    margin: 5% 0;
+  }
+}
+
+/* EXTRA STYLES */
+footer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=main.css.map */

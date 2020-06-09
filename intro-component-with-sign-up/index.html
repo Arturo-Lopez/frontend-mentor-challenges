@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <!-- NORMALIZE CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Learn to code by watching others</h1>
+        <p>
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </header>
+      <div>
+        <div class="notification">
+          <span>Try it free 7 days</span> then $20/mo. thereafter
+        </div>
+        <form>
+          <div class="input-wrapper">
+            <input type="text" placeholder="firstname" id="firstname" />
+          </div>
+          <div class="input-wrapper">
+            <input type="text" placeholder="lastname" id="lastname" />
+          </div>
+          <div class="input-wrapper">
+            <input type="email" placeholder="email" id="email" />
+          </div>
+          <div class="input-wrapper">
+            <input type="password" placeholder="password" id="password" />
+          </div>
+          <button id="btn">Claim your free trial</button>
+          <p>
+            By clicking the button, you are agreeing to our
+            <a href="#">Terms and Services</a>
+          </p>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://arturo-lopez.com">Arturo Lopez</a>.
+      </p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="./main.js"></script>
+  </body>
+</html>
